@@ -20,6 +20,9 @@ def classify_triangle(a, b, c):
     if s1 <= 0 or s2 <= 0 or s3 <= 0:     # check for invalid length
         raise ValueError("Invalid side length.")
 
+    if s1 + s2 <= s3 or s1 + s3 <= s2 or s2 + s3 <= s1:    # check for valid triangle
+        raise ValueError("Invalid triangle")
+
     result = "scalene"
     if s1 == s2 == s3:
         result = "equilateral"      # classify triangles by length of sides

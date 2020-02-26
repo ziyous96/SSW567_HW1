@@ -29,7 +29,7 @@ class TestTriangles(unittest.TestCase):
         """ Test if the function returns the correct result """
 
         # triangles with integer side length
-        self.assertEqual(classify_triangle(1, 2, 3), "scalene triangle")
+        self.assertEqual(classify_triangle(2, 3, 4), "scalene triangle")
         self.assertEqual(classify_triangle(3, 4, 5), "scalene right triangle")
         self.assertEqual(classify_triangle(4, 5, 3), "scalene right triangle")
         self.assertEqual(classify_triangle(3, 3, 3), "equilateral triangle")
@@ -37,7 +37,7 @@ class TestTriangles(unittest.TestCase):
         self.assertEqual(classify_triangle(3, 5, 3), "isosceles triangle")
 
         # triangles with float side length
-        self.assertEqual(classify_triangle(1, 2.2, 3.3), "scalene triangle")
+        self.assertEqual(classify_triangle(2, 2.2, 3.3), "scalene triangle")
         self.assertEqual(classify_triangle(3.3, 3.3, 3.3), "equilateral triangle")
         self.assertEqual(classify_triangle(3.3, 3.3, 5), "isosceles triangle")
         self.assertEqual(classify_triangle(3.3, 5, 3.3), "isosceles triangle")
